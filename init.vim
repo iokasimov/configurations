@@ -2,9 +2,6 @@ set hidden
 set number
 set clipboard=unnamedplus
 set updatetime=250
-set tabstop=4
-set shiftwidth=4
-:set list!
 
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 Plug 'justinmk/vim-dirvish', {'branch': 'master'}
@@ -18,9 +15,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
 call plug#end()
 
+let mapleader=","
+
 set termguicolors
 colorscheme sunset
-syntax enable
 
 " " Copy to clipboard
 vnoremap  <leader>y  "+y
@@ -33,6 +31,13 @@ nnoremap <leader>p "+p
 nnoremap <leader>P "+P
 vnoremap <leader>p "+p
 vnoremap <leader>P "+P
+
+set shada="NONE"
+set tabstop=4
+set shiftwidth=4
+:set list!
+
+syntax enable
 
 let g:dirvish_git_show_ignored = 1
 
